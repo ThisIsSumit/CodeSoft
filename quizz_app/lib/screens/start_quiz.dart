@@ -32,7 +32,7 @@ class StartQuizPage extends StatelessWidget {
             CustomButton(
               onpressed: () => returnToMenu,
               child: Text(
-                'Menu',
+                'Back',
                 style: TextStyle(
                     fontSize: 20, color: Theme.of(context).colorScheme.primary),
               ),

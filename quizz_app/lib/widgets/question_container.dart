@@ -14,27 +14,37 @@ class QuestionContainer extends StatelessWidget {
         Container(
           height: 40,
           width: 100,
-          decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.onSurface,
-              borderRadius: const BorderRadius.only(
+          decoration: const BoxDecoration(
+              color: Color.fromARGB(255, 169, 19, 186),
+              borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(50), topRight: Radius.circular(50))),
           child: Center(
             child: Text(
               "${currentIndex + 1}",
-              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+              style: TextStyle(
+                  color: Theme.of(context).colorScheme.primary,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500),
             ),
           ),
         ),
         Container(
           height: 250,
           width: 350,
-          decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.onSurface,
-              borderRadius: const BorderRadius.all(Radius.circular(50))),
-          child: Center(
-            child: Text(
-              currentQuestionTitle,
-              style: const TextStyle(fontSize: 20),
+          decoration: const BoxDecoration(
+              color: Color.fromARGB(255, 169, 19, 186),
+              borderRadius: BorderRadius.all(Radius.circular(50))),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Center(
+              child: Text(
+                textAlign: TextAlign.center,
+                currentQuestionTitle,
+                style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 20,
+                    color: Theme.of(context).colorScheme.primary),
+              ),
             ),
           ),
         )

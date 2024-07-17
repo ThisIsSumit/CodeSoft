@@ -20,10 +20,8 @@ class CustomButton extends StatelessWidget {
                 Theme.of(context).colorScheme.primary, // Text color
             side: BorderSide(
                 color: Theme.of(context).colorScheme.onSurface), // Border color
-            backgroundColor: Theme.of(context)
-                .colorScheme
-                .onSurface
-                .withOpacity(0.5), // Background color
+            backgroundColor:
+                Theme.of(context).colorScheme.onSurface.withOpacity(0.5),
           ),
           child: child),
     );

@@ -4,7 +4,7 @@ import 'package:quizz_app/screens/catogories_screen.dart';
 final kcolorScheme = ColorScheme.fromSwatch().copyWith(
     brightness: Brightness.light,
     primary: Colors.white,
-    surface: Color.fromRGBO(71, 11, 90, 1),
+    surface: const Color.fromRGBO(71, 11, 90, 1),
     onSurface: const Color.fromRGBO(183, 144, 209, 1));
 final theme = ThemeData().copyWith(
   scaffoldBackgroundColor: kcolorScheme.surface,
