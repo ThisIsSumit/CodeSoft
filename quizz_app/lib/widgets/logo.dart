@@ -8,22 +8,30 @@ class Logo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
       children: [
-        Container(
-          color: logoColor,
-          child: Text("brain"),
-        ),
-        SizedBox(
-          child: Text(
-            "QUIZ",
-            style: TextStyle(
-              fontWeight: FontWeight.w900,
-              fontSize: 100,
-              color: logoColor,
-            ),
+        Padding(
+          padding: const EdgeInsets.only(left: 20),
+          child: Image.asset(
+            'assets/images/brainup.png',
+            color: Theme.of(context).colorScheme.onSurface,
           ),
         ),
-        SizedBox(child: Text("inverted brain"))
+        Text(
+          "QUIZ",
+          style: TextStyle(
+            fontWeight: FontWeight.w900,
+            fontSize: 80,
+            color: logoColor,
+          ),
+        ),
+        Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: Image.asset(
+              "assets/images/braindown.png",
+              color: Theme.of(context).colorScheme.onSurface,
+            )),
       ],
     );
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quizz_app/screens/catogories_screen.dart';
+import 'package:quizz_app/screens/splash_screen.dart';
 
 final kcolorScheme = ColorScheme.fromSwatch().copyWith(
     brightness: Brightness.light,
@@ -22,7 +22,7 @@ class QuizApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: theme,
-      home: const CatogoriesScreen(),
+      home: const SplashScreen(),
     );
   }
 }

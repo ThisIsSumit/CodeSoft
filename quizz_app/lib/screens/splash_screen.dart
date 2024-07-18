@@ -13,20 +13,20 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   void changeScreen() {
-    Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => const CatogoriesScreen()));
+    Navigator.pushReplacement(context,
+        MaterialPageRoute(builder: (context) => const CatogoriesScreen()));
   }
 
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 3), changeScreen);
+    Timer(const Duration(seconds: 2), changeScreen);
   }
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Logo(),
+      body: Center(child: Logo()),
     );
   }
 }

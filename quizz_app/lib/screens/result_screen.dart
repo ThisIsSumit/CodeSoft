@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:quizz_app/model/question.dart';
 import 'package:quizz_app/screens/catogories_screen.dart';
 import 'package:quizz_app/screens/questions_screen.dart';
-import 'package:quizz_app/widgets/custom_button.dart';
 import 'package:quizz_app/widgets/result_card.dart';
 
 class ResultScreen extends StatelessWidget {
@@ -54,7 +53,7 @@ class ResultScreen extends StatelessWidget {
                 },
               ),
               const SizedBox(
-                height: 150,
+                height: 120,
               )
             ],
           ),
@@ -65,28 +64,39 @@ class ResultScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisSize: MainAxisSize.min,
             children: [
-              ElevatedButton(
-                  style: TextButton.styleFrom(backgroundColor: Colors.black),
-                  onPressed: () {
-                    Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const CatogoriesScreen(),
-                        ));
-                  },
-                  child: const Text("Home")),
-              ElevatedButton(
-                  style: TextButton.styleFrom(backgroundColor: Colors.black),
-                  onPressed: () {
-                    Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => QuestionsScreen(
-                            questionKey: questionKey,
-                          ),
-                        ));
-                  },
-                  child: const Text("Restart"))
+              Padding(
+                padding: const EdgeInsets.all(4.0),
+                child: Container(
+                  // ignore: prefer_const_constructors
+                  color: Colors.purple.withOpacity(0.9),
+                  child: TextButton(
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const CatogoriesScreen(),
+                            ));
+                      },
+                      child: const Text("Home")),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(4.0),
+                child: Container(
+                  color: Colors.purple.withOpacity(0.9),
+                  child: TextButton(
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => QuestionsScreen(
+                                questionKey: questionKey,
+                              ),
+                            ));
+                      },
+                      child: const Text("Restart")),
+                ),
+              )
             ],
           ),
         )
